@@ -1,6 +1,6 @@
 
 @extends('layouts.master')
-
+@section('title','Update Student details')
 @section('content')
 
 <div class="container">
@@ -31,7 +31,7 @@
                 <div id="phoneHelp" class="form-text">We'll never share your phone number anyone else.</div>
               </div>
 
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">Update</button>
         </form>
     </div>
 </div>

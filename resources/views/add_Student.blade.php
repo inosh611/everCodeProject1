@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title','Create New Student')
 @section('content')
 
     <div class="container">
