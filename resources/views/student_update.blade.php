@@ -8,6 +8,13 @@
     <div class="row text-center mt-5">
         <h1>UPDATE STUDENT DETAILS</h1>
     </div>
+    @if (session()->has('message'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ session('message') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                </div>
+    @endif
     <div class="row mt-2 mb-3">
         <div>
             <a href="{{ url('/') }}" class="btn btn-primary">Back to Home</a>
@@ -30,7 +37,8 @@
                 <input type="text" class="form-control" id="phone" aria-describedby="emailHelp" name="phone" value="{{ $student->student_phone }}">
                 <div id="phoneHelp" class="form-text">We'll never share your phone number anyone else.</div>
               </div>
-
+             <!-- Google Recaptcha Widget-->
+            <div class="g-recaptcha mt-4 mb-4" data-sitekey={{config('services.recaptcha.key')}}></div>
             <button type="submit" class="btn btn-success">Update</button>
         </form>
     </div>
